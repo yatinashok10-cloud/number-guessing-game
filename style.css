@@ -1,0 +1,150 @@
+:root {
+  --wood1: #b88a5a;
+  --wood2: #8e6339;
+  --paper: #fbf8ef;
+  --line: #cfd9e6;
+  --margin: #e0a1a1;
+  --ink: #1f3a73;
+  --text: #3a3630;
+  --muted: #8a8478;
+  --red: #b3372f;
+  --green: #2c6e49;
+  --tape: rgba(255, 233, 150, .65);
+  --sticky: #ffe98a;
+  --ring: rgba(70, 40, 15, .22);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --wood1: #3b2a1d;
+    --wood2: #241810;
+    --paper: #2b3a33;
+    --line: #36473f;
+    --margin: #7a4a4a;
+    --ink: #f1efe6;
+    --text: #d8d6cc;
+    --muted: #9aa69e;
+    --red: #ff9b8f;
+    --green: #a8e0b4;
+    --tape: rgba(220, 200, 130, .35);
+    --sticky: #c9b45a;
+    --ring: rgba(0, 0, 0, .35);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  padding: 36px 14px;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(255, 236, 190, .28), transparent 55%),
+    radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, .38) 100%),
+    repeating-linear-gradient(92deg, rgba(0, 0, 0, .06) 0 2px, transparent 2px 9px),
+    repeating-linear-gradient(88deg, rgba(255, 255, 255, .05) 0 1px, transparent 1px 13px),
+    linear-gradient(180deg, var(--wood1), var(--wood2));
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  right: 7%;
+  bottom: 10%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid var(--ring);
+  box-shadow: inset 0 0 6px var(--ring), 0 0 4px var(--ring);
+  transform: rotate(20deg) scaleY(.96);
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 5%;
+  bottom: 13%;
+  width: 200px;
+  height: 14px;
+  background: linear-gradient(90deg,
+    #d9605b 0 8%, #b9b9b9 8% 14%, #e8b23a 14% 80%, #f1d7a8 80% 90%, #333 90% 100%);
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .35));
+  transform: rotate(-24deg);
+  pointer-events: none;
+}
+
+html::before {
+  content: "good luck :)";
+  position: fixed;
+  right: 5%;
+  top: 14%;
+  width: 130px;
+  height: 130px;
+  padding: 26px 14px 0;
+  background: linear-gradient(160deg, var(--sticky), color-mix(in srgb, var(--sticky) 85%, #e0a030));
+  color: #5b4a1a;
+  font-family: "Caveat", "Segoe Print", cursive;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, .3);
+  transform: rotate(5deg);
+  pointer-events: none;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  align-self: flex-start;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom, transparent 0, transparent 35px, var(--line) 35px, var(--line) 36px);
+  border-left: 3px solid var(--margin);
+  padding: 26px 24px 28px 34px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, .1), 0 18px 34px rgba(0, 0, 0, .35);
+  transform: rotate(-0.6deg);
+  border-radius: 3px;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 110px;
+  height: 28px;
+  margin-left: -55px;
+  background: var(--tape);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+  transform: rotate(-3deg);
+}
+
+h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--ink);
+  font-weight: 700;
+  transform: rotate(-1deg);
+}
+.sub { margin: 6px 0 16px; color: var(--muted); }
+
+.levels { display: flex; gap: 18px; margin-bottom: 14px; }
+.levels button {
+  background: none; border: 0; padding: 0 2px;
+  font: inherit; font-size: 26px; color: var(--muted); cursor: pointer;
+}
+.levels button:hover { color: var(--ink); }
+.levels button.on {
+  color: var(--ink); font-weight: 700;
+}
