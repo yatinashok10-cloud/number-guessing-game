@@ -2,7 +2,8 @@
 
 A quiz game with 56 questions on computers, physics, chemistry, biology, maths, geography, history, English and general knowledge. It started as a terminal game in Python, and I then made a web version you can play in the browser.
 
-<img width="1907" height="1080" alt="screenshot of the quiz" src="https://github.com/user-attachments/assets/8f371b09-5e8a-4a23-9135-620813d3f44f" />
+<img width="1920" height="999" alt="Screenshot 2026-11-07 200845" src="https://github.com/user-attachments/assets/b131375b-05f4-4b5e-b8b6-a98cbf988ed1" />
+
 
 **Try it online:** https://quizformiddlegraders.netlify.app/
 
