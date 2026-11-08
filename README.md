@@ -1,53 +1,45 @@
-# Computer Quiz
+# Guess My Number
 
-A quiz game with 56 questions on computers, physics, chemistry, biology, maths, geography, history, English and general knowledge. It started as a terminal game in Python, and I then made a web version you can play in the browser.
+A number guessing game I made. It looks like a page from a notebook sitting on a wooden desk. The computer picks a secret number and you have to guess it, and it tells you if you're too high or too low. It's just one HTML file, so you don't need to install anything.
 
-<img width="1920" height="999" alt="Screenshot 2026-11-07 200845" src="https://github.com/user-attachments/assets/b131375b-05f4-4b5e-b8b6-a98cbf988ed1" />
+<img width="1920" height="1074" alt="Screenshot 2026-11-07 094206" src="https://github.com/user-attachments/assets/7abbc73f-53ff-401e-a4af-c0bc881db2c7" />
 
-
-**Try it online:** https://quizformiddlegraders.netlify.app/
 
 ## What it does
 
-- Picks 10 random questions each round (you can change the number)
-- 4 multiple-choice options per question, shuffled every time
-- Live score and a progress bar
-- Shows the right answer when you get one wrong
-- The Python version also has coloured text, typing effects, a streak counter, and a score breakdown by subject
-
-## Why I made it
-
-because i like games and wanted to increase sharpness of my general knowledge
-
-## How it was made
-
-**Terminal version:** written in plain Python with no extra libraries (just `random`, `time`, `sys`, `os`). Questions are stored as tuples in a list, so adding one means copying a line and changing the text. It uses ANSI colour codes, which is why it checks `sys.stdout.isatty()` first, so colours don't break in IDLE or the VS Code Output tab.
-
-**Web version:** HTML, CSS and vanilla JavaScript, with no frameworks. It uses the same question list as the Python version.
-
-## Tech stack
-
-- Python 3 (terminal version)
-- HTML, CSS, JavaScript (web version)
+- Three levels: Easy, Medium and Hard
+- Your tries are little boxes that get crossed off when you're wrong
+- It shows the range your number could still be in
+- Gives hints like "Getting warm" or "Ice cold"
+- Saves your best score for each level
+- Draws a circle around the number when you win
+- Dark mode if your device is set to dark
+- Works on phones too, though a few of the desk decorations disappear on small screens
 
 ## How to run it
 
-You can just play it online at the link above, you only need an internet connection. To run it on your own computer:
-
-### Terminal version
-
-1. Clone the repo
-2. Run the quiz (needs Python 3, no installs required)
-python quiz.py
-Run it in a real terminal. In VS Code, use Terminal > New Terminal.
-
-### Web version
-
 https://numberguessingbyyatin.netlify.app/
 
+## How to play
 
-## Adding your own questions
+Pick a level, type a number and hit Guess (Enter works too). Every wrong guess crosses off a box. If you run out of boxes you lose. Click Go again to play another round.
 
-no do not because you may damage the code
+Level-Range-Tries
+Easy-1 to 30-8
+Medium-1 to 100-8
+Hard-1 to 1000-11
 
-Made by Yatin
+## Changing stuff
+
+dont change anything !!!!!
+
+## Problems
+
+none when i made
+
+## What I want to add
+
+none because it good
+
+## License
+none
