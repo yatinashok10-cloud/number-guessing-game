@@ -1,105 +1,47 @@
-# Guess My Number
+# Computer Quiz
 
-A number guessing game that looks like a page from a notebook, sitting on a wooden desk. The computer picks a secret number, and you try to find it using "too high" and "too low" hints. It's a single HTML file and needs no installation or server.
+A quiz game with 56 questions on computers, physics, chemistry, biology, maths, geography, history, English and general knowledge. It started as a terminal game in Python, and I then made a web version you can play in the browser.
 
-## Features
+<img width="1907" height="1080" alt="screenshot of the quiz" src="https://github.com/user-attachments/assets/8f371b09-5e8a-4a23-9135-620813d3f44f" />
 
-- Three difficulty levels: Easy, Medium and Hard
-- Tries shown as boxes you cross off
-- Shows the range the number can still be in
-- Hot/cold hints ("Getting warm", "Ice cold", and so on)
-- Best score saved for each level
-- A hand-drawn circle around the number when you win
-- Light and dark mode that follows your device
-- Layout adjusts for PC and phone screens
+**Try it online:** https://quizformiddlegraders.netlify.app/
 
-## System Requirements
-any os
+## What it does
 
-### Hardware
+- Picks 10 random questions each round (you can change the number)
+- 4 multiple-choice options per question, shuffled every time
+- Live score and a progress bar
+- Shows the right answer when you get one wrong
+- The Python version also has coloured text, typing effects, a streak counter, and a score breakdown by subject
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| Processor | Any 1 GHz CPU (dual-core) | Any dual-core 2 GHz or faster |
-| RAM | 512 MB free | 2 GB or more |
-| Storage | 1 MB for the file | 1 MB |
-| Display | 1024 x 768 | 1366 x 768 or larger |
-| Input | Keyboard or touch | Keyboard and mouse |
-| Graphics | Any (no GPU needed) | Any |
+## Why I made it
 
-The game runs on practically any computer made in the last 10 years. It doesn't use much memory or processing power.
+because i like games and wanted to increase sharpness of my general knowledge
 
-### Software
+## How it was made
 
-| Requirement | Details |
-|-------------|---------|
-| Operating system | Windows 7+, macOS 10.13+, Linux, Android, iOS |
-| Browser | Chrome 90+, Edge 90+, Firefox 90+, Safari 14+ |
-| JavaScript | Must be enabled |
-| Internet | Optional. Only needed to load the handwriting font. Without it the game uses a default cursive font and works the same. |
+**Terminal version:** written in plain Python with no extra libraries (just `random`, `time`, `sys`, `os`). Questions are stored as tuples in a list, so adding one means copying a line and changing the text. It uses ANSI colour codes, which is why it checks `sys.stdout.isatty()` first, so colours don't break in IDLE or the VS Code Output tab.
 
-### Not needed
+**Web version:** HTML, CSS and vanilla JavaScript, with no frameworks. It uses the same question list as the Python version.
 
-- No Node.js, Python or other programming tools
-- No web server
-- No database
-- No extra libraries to install
+## Tech stack
 
-## How to Run
+- Python 3 (terminal version)
+- HTML, CSS, JavaScript (web version)
 
-1. Download or copy `index.html` to any folder.
-2. Double-click `index.html`. It opens in your default browser.
-3. Start guessing.
+## How to run it
 
-## How to Play
+You can just play it online at the link above, you only need an internet connection. To run it on your own computer:
 
-1. Pick a level at the top of the page.
-2. Type a number in the box and click **Guess** (or press Enter).
-3. Read the hint and adjust. Each wrong guess crosses off one box.
-4. Find the number before you run out of boxes.
-5. Click **Go again** (or press Enter) to play another round.
+### Terminal version
+you have the web verision already
 
-### Levels
+### Web version
 
-| Level | Number range | Tries |
-|-------|--------------|-------|
-| Easy | 1 to 50 | 10 |
-| Medium | 1 to 100 | 7 |
-| Hard | 1 to 500 | 9 |
+https://numberguessingbyyatin.netlify.app/
 
-## Project Structure
+## Adding your own questions
 
-```
-guess-my-number/
-├── index.html    The whole game (HTML, CSS pyton and JavaScript)
-└── README.md     This file
-```
+no dont add any questions you may damage the code
 
-## Customizing
-
-Open `index.html` in any text editor.
-
-- **Change levels:** find `var LEVELS` near the bottom and edit `max` (highest number) and `tries` (number of guesses).
-- **Change the sticky note text:** find `good luck :)` and replace it.
-- **Change colors:** edit the values at the top of the `<style>` section, such as `--ink` (writing color) and `--paper` (page color).
-- **Change the desk:** edit `--wood1` and `--wood2` to change the wood colors.
-
-## Troubleshooting
-
-| Problem | Fix |
-|---------|-----|
-| Page is blank | Make sure the file starts with `<!DOCTYPE html>` and ends with `</html>`. |
-| Old version still showing | Press Ctrl + Shift + R to reload without the cache. |
-| Pencil, coffee ring and sticky note are missing | They are hidden on windows narrower than 760 px. Make the window wider. |
-| Font looks plain | You're offline or the font failed to load. The game still works. |
-| Best scores don't save | Your browser is blocking local storage (some private modes do). The game still works. |
-
-## Browser Storage
-
-Best scores are saved in your browser's local storage under the key `guess-best`. Nothing is sent anywhere. To reset your scores, clear the site data in your browser settings.
-
-## License
-
-Free to use, copy and change for personal
-
-<img width="1920" height="1074" alt="Screenshot 2026-11-07 094206" src="https://github.com/user-attachments/assets/3304c6d2-5739-45dc-a7a4-d0a0fa47b4e2" />
+Made by Yatin
