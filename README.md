@@ -34,14 +34,19 @@ because i like games and wanted to increase sharpness of my general knowledge
 You can just play it online at the link above, you only need an internet connection. To run it on your own computer:
 
 ### Terminal version
-you have the web verision already
+
+1. Clone the repo
+2. Run the quiz (needs Python 3, no installs required)
+python quiz.py
+Run it in a real terminal. In VS Code, use Terminal > New Terminal.
 
 ### Web version
 
 https://numberguessingbyyatin.netlify.app/
 
+
 ## Adding your own questions
 
-no dont add any questions you may damage the code
+no do not because you may damage the code
 
 Made by Yatin
