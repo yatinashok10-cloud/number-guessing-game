@@ -5,7 +5,8 @@ A number guessing game I made in three versions: a web page, a Python script and
 **Play it here:** https://yguessthenumber.netlify.app/
 
 
-![Screenshot](<img width="1919" height="956" alt="Screenshot 2026-11-09 040426" src="https://github.com/user-attachments/assets/cfee7657-8aa6-4aad-8772-7fd1b0533b56" />)
+![Screenshot](<img width="1919" height="956" alt="Screenshot 2026-11-09 040426" src="https://github.com/user-attachments/assets/b70c3b65-71be-462d-b22d-ace04df79794" />)
+
 
 ## Levels
 
