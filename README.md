@@ -1,45 +1,58 @@
 # Guess My Number
 
-A number guessing game I made. It looks like a page from a notebook sitting on a wooden desk. The computer picks a secret number and you have to guess it, and it tells you if you're too high or too low. It's just one HTML file, so you don't need to install anything.
+A number guessing game I made in three versions: a web page, a Python script and a Java program. The computer picks a secret number and you try to find it before you run out of tries.
 
-<img width="1920" height="1074" alt="Screenshot 2026-11-07 094206" src="https://github.com/user-attachments/assets/7abbc73f-53ff-401e-a4af-c0bc881db2c7" />
+**Play it here:** https://yguessthenumber.netlify.app/
 
+
+![Screenshot](<img width="1919" height="956" alt="Screenshot 2026-11-09 040426" src="https://github.com/user-attachments/assets/cfee7657-8aa6-4aad-8772-7fd1b0533b56" />)
+
+## Levels
+
+| Level  | Number range | Tries |
+|--------|--------------|-------|
+| Easy   | 1 to 50      | 10    |
+| Medium | 1 to 100     | 7     |
+| Hard   | 1 to 500     | 9     |
 
 ## What it does
 
-- Three levels: Easy, Medium and Hard
-- Your tries are little boxes that get crossed off when you're wrong
-- It shows the range your number could still be in
-- Gives hints like "Getting warm" or "Ice cold"
-- Saves your best score for each level
-- Draws a circle around the number when you win
-- Dark mode if your device is set to dark
-- Works on phones too, though a few of the desk decorations disappear on small screens
+- Says "too high" or "too low" after every guess
+- Won't let you guess the same number twice
+- Web version: shows how close you are (from "ice cold" to "super close"), the range the number must be in, a row of boxes for your tries, and your best score for each level
+- Web version works on phones, has a dark mode, and uses a midnight black, white and lime green colour palette
 
 ## How to run it
 
-https://numberguessingbyyatin.netlify.app/
+**Web version:** open `index.html` in a browser.
 
-## How to play
+**Python version:** you need Python 3.
 
-Pick a level, type a number and hit Guess (Enter works too). Every wrong guess crosses off a box. If you run out of boxes you lose. Click Go again to play another round.
+```
+python guess_the_number.py
+```
 
-Level-Range-Tries
-Easy-1 to 30-8
-Medium-1 to 100-8
-Hard-1 to 1000-11
+**Java version:** you need Java installed.
 
-## Changing stuff
+```
+javac GuessingGame.java
+java GuessingGame
+```
 
-dont change anything !!!!!
+## Files
 
-## Problems
-
-none when i made
-
-## What I want to add
-
-none because it good
+```
+index.html            the web page
+style.css             the look of the page
+script.js             the game code for the web version
+guess_the_number.py   the Python version
+GuessingGame.java     the Java version
+favicon.svg           the tab icon
+LICENSE               MIT license
+```
 
 ## License
-none
+
+MIT. See the `LICENSE` file.
+
+Made by Yatin.
