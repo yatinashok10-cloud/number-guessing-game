@@ -18,6 +18,17 @@ def choose_level():
         print("Please enter 1, 2 or 3.")
 
 
+def ask_guess(attempt, tries, high, tried):
+    while True:
+        raw = input(f"Guess {attempt}/{tries}: ").strip()
+        if not (raw.isascii() and raw.isdigit()) or not 1 <= int(raw) <= high:
+            print(f"Enter a whole number from 1 to {high}.")
+        elif int(raw) in tried:
+            print("You already tried that number.")
+        else:
+            return int(raw)
+
+
 def play():
     name, high, tries = choose_level()
     secret = random.randint(1, high)
@@ -26,16 +37,7 @@ def play():
     print(f"\n{name} mode: I'm thinking of a number between 1 and {high}.")
 
     for attempt in range(1, tries + 1):
-        while True:
-            raw = input(f"Guess {attempt}/{tries}: ").strip()
-            if not raw.isdigit() or not 1 <= int(raw) <= high:
-                print(f"Enter a whole number from 1 to {high}.")
-            elif int(raw) in tried:
-                print("You already tried that number.")
-            else:
-                guess = int(raw)
-                break
-
+        guess = ask_guess(attempt, tries, high, tried)
         tried.append(guess)
 
         if guess == secret:
@@ -56,4 +58,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print("\nBye!")

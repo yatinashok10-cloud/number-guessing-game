@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,12 +14,16 @@ public class GuessingGame {
     private static final int[] TRIES = {10, 7, 9};
 
     public static void main(String[] args) {
-        do {
-            play();
-            System.out.print("\nPlay again? (y/n): ");
-        } while (in.nextLine().trim().equalsIgnoreCase("y"));
+        try {
+            do {
+                play();
+                System.out.print("\nPlay again? (y/n): ");
+            } while (in.nextLine().trim().equalsIgnoreCase("y"));
 
-        System.out.println("Thanks for playing!");
+            System.out.println("Thanks for playing!");
+        } catch (NoSuchElementException e) {
+            System.out.println("\nBye!");
+        }
     }
 
     private static int chooseLevel() {
